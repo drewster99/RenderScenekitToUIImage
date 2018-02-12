@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zo9-D1-WC2">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="m8g-q0-D5K">
+            <objects>
+                <viewController id="Zo9-D1-WC2" customClass="ViewController" customModule="RenderScenekitToUIImage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7El-nZ-sQn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TWI-2P-TsR">
+                                <rect key="frame" x="8" y="28" width="359" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="JEG-sr-6SE"/>
+                                </constraints>
+                            </sceneKitView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Un4-d1-J36">
+                                <rect key="frame" x="8" y="484" width="359" height="175"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="7ax-sa-Pfs"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJH-xb-x69">
+                                <rect key="frame" x="8" y="348" width="359" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="aim-AX-ueh"/>
+                                </constraints>
+                                <state key="normal" title="Snapshot Hidden Scene"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="button2Clicked:" destination="Zo9-D1-WC2" eventType="touchUpInside" id="V2S-9o-YaY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kL-a9-4d4">
+                                <rect key="frame" x="8" y="416" width="359" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="M1D-L7-bHs"/>
+                                </constraints>
+                                <state key="normal" title="Continuous Snapshots"/>
+                                <connections>
+                                    <action selector="continuousButtonTouchDown:" destination="Zo9-D1-WC2" eventType="touchDown" id="wFh-Fb-8Vx"/>
+                                    <action selector="continuousButtonTouchUp:" destination="Zo9-D1-WC2" eventType="touchUpInside" id="n7C-uA-SpS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZoN-Pg-GJB" firstAttribute="trailing" secondItem="gJH-xb-x69" secondAttribute="trailing" constant="8" id="EA8-Tz-tbs"/>
+                            <constraint firstItem="gJH-xb-x69" firstAttribute="leading" secondItem="ZoN-Pg-GJB" secondAttribute="leading" constant="8" id="HOF-y2-ela"/>
+                            <constraint firstItem="TWI-2P-TsR" firstAttribute="leading" secondItem="ZoN-Pg-GJB" secondAttribute="leading" constant="8" id="Mk5-eu-a39"/>
+                            <constraint firstItem="Un4-d1-J36" firstAttribute="top" secondItem="2kL-a9-4d4" secondAttribute="bottom" constant="8" id="aBQ-6J-pYu"/>
+                            <constraint firstItem="ZoN-Pg-GJB" firstAttribute="trailing" secondItem="TWI-2P-TsR" secondAttribute="trailing" constant="8" id="aUT-aX-0I2"/>
+                            <constraint firstItem="ZoN-Pg-GJB" firstAttribute="trailing" secondItem="2kL-a9-4d4" secondAttribute="trailing" constant="8" id="d5b-3O-ymV"/>
+                            <constraint firstItem="2kL-a9-4d4" firstAttribute="top" secondItem="gJH-xb-x69" secondAttribute="bottom" constant="8" id="fWf-Ia-nTV"/>
+                            <constraint firstItem="ZoN-Pg-GJB" firstAttribute="trailing" secondItem="Un4-d1-J36" secondAttribute="trailing" constant="8" id="gNS-ZL-iaG"/>
+                            <constraint firstItem="2kL-a9-4d4" firstAttribute="leading" secondItem="ZoN-Pg-GJB" secondAttribute="leading" constant="8" id="hr0-5K-ZAl"/>
+                            <constraint firstItem="gJH-xb-x69" firstAttribute="top" relation="greaterThanOrEqual" secondItem="TWI-2P-TsR" secondAttribute="bottom" constant="8" id="qiy-QK-poj"/>
+                            <constraint firstItem="Un4-d1-J36" firstAttribute="leading" secondItem="ZoN-Pg-GJB" secondAttribute="leading" constant="8" id="x4D-EK-QKZ"/>
+                            <constraint firstItem="TWI-2P-TsR" firstAttribute="top" secondItem="ZoN-Pg-GJB" secondAttribute="top" constant="8" id="xii-ux-1ZH"/>
+                            <constraint firstItem="ZoN-Pg-GJB" firstAttribute="bottom" secondItem="Un4-d1-J36" secondAttribute="bottom" constant="8" id="ywX-S0-dbK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZoN-Pg-GJB"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Un4-d1-J36" id="orS-K6-D0f"/>
+                        <outlet property="sceneView" destination="TWI-2P-TsR" id="zkn-G3-6tB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I33-gT-Qlx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-367.19999999999999" y="-246.02698650674665"/>
+        </scene>
+    </scenes>
+</document>
