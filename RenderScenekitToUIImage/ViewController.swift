@@ -89,7 +89,6 @@ class ViewController: UIViewController {
         hiddenScene.rootNode.addChildNode(lightNode1)
         hiddenScene.rootNode.addChildNode(lightNode2)
 
-
         cubeNode.runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: CGFloat.pi / 2, z: CGFloat.pi * 2, duration: 7)))
        
         // This will fail if you are on the simulator:
